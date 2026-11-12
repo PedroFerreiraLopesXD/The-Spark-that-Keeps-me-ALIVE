@@ -18,8 +18,8 @@ const SENSITIVITY = 0.003
 @export var stamina := 100.0
 @export var stamina_regen_delay := 1.5
 var regen_timer := 0.0
-@export var stamina_drain := 10.0
-@export var stamina_regen := 8.0
+@export var stamina_drain := 8.0
+@export var stamina_regen := 7.0
 #@onready var stamina_bar: ProgressBar = $\"../stamina\"
 
 var is_running := false
@@ -54,7 +54,6 @@ func _input(event):
 
 func _ready():
 	camera_base_pos = camera.position
-	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	var capsula := colisao.shape as CapsuleShape3D
 	altura_normal = capsula.height
@@ -125,6 +124,7 @@ func _headbob(time) -> Vector3:
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_glpr6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pjt0s"]
+height = 1.4133301
 
 [node name="character" type="CharacterBody3D" unique_id=1164453538 groups=["Jogador"]]
 collision_layer = 5

@@ -1,6 +1,6 @@
 extends ColorRect
 
-@export var duracao: float = 5.0
+@export var duracao: float = 20.0
 
 func _ready() -> void:
 	color = Color(0, 0, 0, 1)

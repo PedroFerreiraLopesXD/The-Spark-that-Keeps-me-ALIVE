@@ -112,6 +112,7 @@ func _on_itenspegar_body_exited(body: Node3D) -> void:
 func pegar_vela() -> void:
 	if player.global_position.distance_to(vela.global_position) > distancia_max:
 		return
+	$out.show()
 	pegou_vela = true
 	pode_pegar_vela= false
 	Global.velas += 1
@@ -119,4 +120,5 @@ func pegar_vela() -> void:
 	vela.hide()
 	print("pegou vela")
 	pode_pegar_vela = true
+	get_tree().change_scene_to_file("res://SCENES/goodhouse.tscn")
 	

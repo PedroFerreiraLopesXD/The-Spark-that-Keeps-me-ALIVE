@@ -189,7 +189,7 @@ skeleton = NodePath("../../Terreno2/StaticBody3D")
 shape = SubResource("ConcavePolygonShape3D_w42ul")
 
 [node name="ArvoreColossal5" type="MeshInstance3D" parent="NavigationRegion3D/Arvores" unique_id=620731489]
-transform = Transform3D(1.1117748, 0, -1.1506333, 0, 1.6, 0, 1.1506333, 0, 1.1117748, -22.97346, -0.19321918, 47.28263)
+transform = Transform3D(1.1117748, 0, -1.1506333, 0, 1.6, 0, 1.1506333, 0, 1.1117748, -22.97346, -0.19321918, 57.75626)
 mesh = ExtResource("11_8xnqn")
 skeleton = NodePath("../../Terreno2/StaticBody3D")
 
@@ -461,7 +461,7 @@ transform = Transform3D(0.99999994, 0, -2.9802322e-08, 0, 0.99999994, 0, 2.98023
 shape = SubResource("ConcavePolygonShape3D_cp7ig")
 
 [node name="SuperArvore7" type="MeshInstance3D" parent="NavigationRegion3D/Arvores" unique_id=63933748]
-transform = Transform3D(1.5862241, 0, -0.20950645, 0, 1.5999999, 0, 0.20950645, 0, 1.5862241, -7.27091, -2.457233, 47.707767)
+transform = Transform3D(1.5862241, 0, -0.20950645, 0, 1.5999999, 0, 0.20950645, 0, 1.5862241, 1.5104089, -2.457233, 47.707767)
 mesh = ExtResource("9_1fe1v")
 skeleton = NodePath("../../..")
 
@@ -708,11 +708,31 @@ transform = Transform3D(-8.742278e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.742278e-09
 mesh = ExtResource("17_mgr0g")
 
 [node name="jaderson pai" parent="." unique_id=1851750971 instance=ExtResource("19_1obli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.457241, 0, -31.6666)
 
 [node name="Itens" type="Node3D" parent="." unique_id=731997]
 
 [node name="Itenspegar" parent="Itens" unique_id=1736848897 instance=ExtResource("20_ck6ot")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.84032, 0, 27.554548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.171436, -3.761043, -6.8804245)
+
+[node name="Itenspegar2" parent="Itens" unique_id=717034067 instance=ExtResource("20_ck6ot")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.529728, -0.49534655, 35.412567)
+
+[node name="Itenspegar4" parent="Itens" unique_id=1680361888 instance=ExtResource("20_ck6ot")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8543224, -0.78691715, 16.643425)
+
+[node name="Itenspegar3" parent="Itens" unique_id=129324550 instance=ExtResource("20_ck6ot")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.529728, 0.9679284, 77.12268)
+
+[node name="out" type="ColorRect" parent="." unique_id=92336430]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="body_entered" from="Fogueira/ligarlampiao" to="." method="_on_ligarlampiao_body_entered"]
 [connection signal="body_exited" from="Fogueira/ligarlampiao" to="." method="_on_ligarlampiao_body_exited"]
@@ -720,6 +740,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.84032, 0, 27.554548)
 [connection signal="body_exited" from="lampiaopegar" to="." method="_on_lampiaopegar_body_exited"]
 [connection signal="body_entered" from="Itens/Itenspegar" to="." method="_on_itenspegar_body_entered"]
 [connection signal="body_exited" from="Itens/Itenspegar" to="." method="_on_itenspegar_body_exited"]
+[connection signal="body_entered" from="Itens/Itenspegar2" to="." method="_on_itenspegar_body_entered"]
+[connection signal="body_exited" from="Itens/Itenspegar2" to="." method="_on_itenspegar_body_exited"]
+[connection signal="body_entered" from="Itens/Itenspegar4" to="." method="_on_itenspegar_body_entered"]
+[connection signal="body_exited" from="Itens/Itenspegar4" to="." method="_on_itenspegar_body_exited"]
+[connection signal="body_entered" from="Itens/Itenspegar3" to="." method="_on_itenspegar_body_entered"]
+[connection signal="body_exited" from="Itens/Itenspegar3" to="." method="_on_itenspegar_body_exited"]
 
 [editable path="CharacterBody3D"]
 [editable path="CanvasLayer"]

@@ -5,7 +5,7 @@ extends CharacterBody3D
 @export var raio_patrulha: float = 15.0
 @export var espera_no_ponto: float = 1.5
 @export var distancia_para_pegar: float = 1.5
-@export var game_over = preload("res://game_over.tscn")
+@export var game_over = preload("res://SCENES/game_over.tscn")
 
 enum Estado { PATRULHANDO, PERSEGUINDO }
 var estado := Estado.PATRULHANDO
@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 		if global_position.distance_to(jogador.global_position) < distancia_para_pegar:
 			print("O monstro pegou o jogador!")
 			player.queue_free()
-			get_tree().change_scene_to_file("res://game_over.tscn")
+			get_tree().change_scene_to_file("res://SCENES/game_over.tscn")
 			Global.luz_ligada = false
 	else:
 		if agente.is_navigation_finished():

@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/wind.mp3-25eb683bb24fc104d58bd864ff89a572.mp3
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4
