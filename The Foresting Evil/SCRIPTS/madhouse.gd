@@ -4,7 +4,7 @@ extends Node3D
 @onready var lampiada = $"CharacterBody3D/cabeça/Camera3D/lampiada"
 @onready var player = $CharacterBody3D
 @onready var fogo = $Fogueira
-@onready var vela = $Itens/Itenspegar/Vela 
+@onready var vela = $Itens/Itenspegar/Vela
 var distancia_max := 2.0
 var pode_pegar = false
 var pode_pegar_vela = false
@@ -114,7 +114,9 @@ func pegar_vela() -> void:
 		return
 	pegou_vela = true
 	pode_pegar_vela= false
+	Global.velas += 1
 	label.hide()
 	vela.hide()
 	print("pegou vela")
+	pode_pegar_vela = true
 	
