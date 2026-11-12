@@ -4,8 +4,7 @@ extends Node3D
 @onready var lampiada = $"CharacterBody3D/cabeça/Camera3D/lampiada"
 @onready var player = $CharacterBody3D
 @onready var fogo = $Fogueira
-@onready var vela = $Itens/Itenspegar/Vela
-
+@onready var vela = $Itens/Itenspegar/Vela 
 var distancia_max := 2.0
 var pode_pegar = false
 var pode_pegar_vela = false
@@ -40,7 +39,7 @@ func _process(_delta: float) -> void:
 		pegar_lampiao()
 		print("pegou")
 	if pode_pegar_vela and not pegou_vela and Input.is_action_just_pressed("interacao"):
-		
+		pegar_vela()
 		print("pegou")
 	
 	
@@ -59,7 +58,7 @@ func pegar_lampiao() -> void:
 	lampiao.hide()
 	lampiada.show()
 	print("pegou 2?")
-	
+
 # Entrando na zona que pode acender
 func _on_ligarlampiao_body_entered(body: Node3D) -> void:
 	if body is CharacterBody3D:
@@ -104,9 +103,18 @@ func _on_itenspegar_body_entered(body: Node3D) -> void:
 		
 
 
-
 func _on_itenspegar_body_exited(body: Node3D) -> void:
 	if body is CharacterBody3D:
 		pode_pegar_vela = false
 		label.hide()
 		print("saiu area vela")
+		
+func pegar_vela() -> void:
+	if player.global_position.distance_to(vela.global_position) > distancia_max:
+		return
+	pegou_vela = true
+	pode_pegar_vela= false
+	label.hide()
+	vela.hide()
+	print("pegou vela")
+	

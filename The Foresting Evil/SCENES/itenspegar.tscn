@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dvemqxq4cgavw"]
+
+[ext_resource type="ArrayMesh" uid="uid://do6ps624m565x" path="res://ASSETS/3DMODELS/VELA.obj" id="1_joqew"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2w74y"]
+radius = 0.7783698
+
+[node name="Itenspegar" type="Area3D" unique_id=1736848897]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="Vela" type="MeshInstance3D" parent="." unique_id=1152265357]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.13435274, -0.26253223, -0.06992197)
+mesh = ExtResource("1_joqew")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Vela" unique_id=572304273]
+transform = Transform3D(1.5624998, 0, 0, 0, 1.5624998, 0, 0, 0, 1.5624998, -0.0018619001, 2.0688763, 0.029639222)
+light_color = Color(1, 0.9137255, 0.6039216, 1)
+light_energy = 4.595
+omni_range = 3.094
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=288198414]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -0.22624552, 0.7588995, -0.13617635)
+shape = SubResource("SphereShape3D_2w74y")

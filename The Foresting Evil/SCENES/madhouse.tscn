@@ -19,7 +19,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dp5vp3qvidklg" path="res://ASSETS/3DMODELS/LAMPIAO.obj" id="17_mgr0g"]
 [ext_resource type="PackedScene" uid="uid://bxo21pth61vex" path="res://SCENES/lampiada.tscn" id="18_mgr0g"]
 [ext_resource type="PackedScene" uid="uid://wbwtqr3v7o6f" path="res://SCENES/monstroassustador.tscn" id="19_1obli"]
-[ext_resource type="ArrayMesh" uid="uid://do6ps624m565x" path="res://ASSETS/3DMODELS/VELA.obj" id="20_ck6ot"]
+[ext_resource type="PackedScene" uid="uid://dvemqxq4cgavw" path="res://SCENES/itenspegar.tscn" id="20_ck6ot"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g644h"]
 sky_top_color = Color(1, 0, 0, 1)
@@ -133,6 +133,14 @@ shape = SubResource("ConcavePolygonShape3D_rj4ge")
 
 [node name="Arvoregrandona1" type="MeshInstance3D" parent="NavigationRegion3D/Terreno2/StaticBody3D" unique_id=304040987]
 transform = Transform3D(0.024999987, 0, 0, 0, 0.058823504, 0, 0, 0, 0.024999987, 1.5305022, 0.5844415, 1.7092134)
+mesh = ExtResource("3_8xnqn")
+
+[node name="Arvoregrandona1" type="MeshInstance3D" parent="NavigationRegion3D/Terreno2/StaticBody3D/Arvoregrandona1" unique_id=1551042475]
+transform = Transform3D(0.70000005, 6.9064754e-12, -8.731149e-11, 3.126388e-13, 0.7, -2.3283064e-10, 0, 2.3283064e-10, 0.6999999, 85.03634, -1.8432773, -106.80427)
+mesh = ExtResource("3_8xnqn")
+
+[node name="Arvoregrandona2" type="MeshInstance3D" parent="NavigationRegion3D/Terreno2/StaticBody3D/Arvoregrandona1" unique_id=491023031]
+transform = Transform3D(0.70000005, 6.9064754e-12, -8.731149e-11, 3.126388e-13, 0.7, -2.3283064e-10, 0, 2.3283064e-10, 0.6999999, 85.03634, -1.8432773, -106.80427)
 mesh = ExtResource("3_8xnqn")
 
 [node name="Arvoregrandona2" type="MeshInstance3D" parent="NavigationRegion3D/Terreno2/StaticBody3D" unique_id=735350083]
@@ -331,6 +339,16 @@ skeleton = NodePath("../../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Arvores/SuperArvore10/StaticBody3D" unique_id=1741035761]
 shape = SubResource("ConcavePolygonShape3D_cp7ig")
 
+[node name="SuperArvore10" type="MeshInstance3D" parent="NavigationRegion3D/Arvores/SuperArvore10" unique_id=1704475676]
+transform = Transform3D(1.4167465, 0, 0.7435247, 0, 1.5999999, 0, -0.7435247, 0, 1.4167465, 60.254723, -3.1252365, 14.029219)
+mesh = ExtResource("9_1fe1v")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Arvores/SuperArvore10/SuperArvore10" unique_id=554226497]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Arvores/SuperArvore10/SuperArvore10/StaticBody3D" unique_id=1214204231]
+shape = SubResource("ConcavePolygonShape3D_cp7ig")
+
 [node name="SuperArvore9" type="MeshInstance3D" parent="NavigationRegion3D/Arvores" unique_id=1773314371]
 transform = Transform3D(-1.4676744, 0, -0.63712764, 0, 1.5999999, 0, 0.63712764, 0, -1.4676744, 44.163033, -2.457233, 76.153946)
 mesh = ExtResource("9_1fe1v")
@@ -419,6 +437,16 @@ skeleton = NodePath("../../..")
 [node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Arvores/SuperArvore4" unique_id=1494727107]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Arvores/SuperArvore4/StaticBody3D" unique_id=138678988]
+shape = SubResource("ConcavePolygonShape3D_cp7ig")
+
+[node name="SuperArvore4" type="MeshInstance3D" parent="NavigationRegion3D/Arvores/SuperArvore4" unique_id=1168309142]
+transform = Transform3D(-2.0246024, 0, 1.0913217, 0, 2.2999997, 0, -1.0913217, 0, -2.0246024, -83.00676, -1.254802, 25.534313)
+mesh = ExtResource("9_1fe1v")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Arvores/SuperArvore4/SuperArvore4" unique_id=1693591890]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Arvores/SuperArvore4/SuperArvore4/StaticBody3D" unique_id=1203807747]
 shape = SubResource("ConcavePolygonShape3D_cp7ig")
 
 [node name="SuperArvore8" type="MeshInstance3D" parent="NavigationRegion3D/Arvores" unique_id=1725822173]
@@ -613,7 +641,7 @@ mesh = ExtResource("17_2w74y")
 visible = false
 
 [node name="CharacterBody3D" parent="." unique_id=1720337367 instance=ExtResource("1_0h1g7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0788994, 44.577374)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.342533, 2.0788994, 53.53196)
 
 [node name="Label3D" parent="CharacterBody3D/cabeça/Camera3D" parent_id_path=PackedInt32Array(1720337367, 1033830822) index="0" unique_id=207887934]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.33617544, -1.0896759)
@@ -683,15 +711,8 @@ mesh = ExtResource("17_mgr0g")
 
 [node name="Itens" type="Node3D" parent="." unique_id=731997]
 
-[node name="Itenspegar" type="Area3D" parent="Itens" unique_id=74901954]
-
-[node name="Vela" type="MeshInstance3D" parent="Itens/Itenspegar" unique_id=1716644159]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.4412665, -0.26253223, 26.084133)
-mesh = ExtResource("20_ck6ot")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Itens/Itenspegar" unique_id=1309640920]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4808798, 0.34214056, 26.175402)
-shape = SubResource("SphereShape3D_2w74y")
+[node name="Itenspegar" parent="Itens" unique_id=1736848897 instance=ExtResource("20_ck6ot")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.84032, 0, 27.554548)
 
 [connection signal="body_entered" from="Fogueira/ligarlampiao" to="." method="_on_ligarlampiao_body_entered"]
 [connection signal="body_exited" from="Fogueira/ligarlampiao" to="." method="_on_ligarlampiao_body_exited"]
