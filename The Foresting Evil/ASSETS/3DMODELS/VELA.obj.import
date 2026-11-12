@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://do6ps624m565x"
+path="res://.godot/imported/VELA.obj-85f9b3adecc1b8b5258603e97562329c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/VELA.obj-85f9b3adecc1b8b5258603e97562329c.mesh"]
+
+source_file="res://ASSETS/3DMODELS/VELA.obj"
+dest_files=["res://.godot/imported/VELA.obj-85f9b3adecc1b8b5258603e97562329c.mesh", "res://.godot/imported/VELA.obj-85f9b3adecc1b8b5258603e97562329c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
